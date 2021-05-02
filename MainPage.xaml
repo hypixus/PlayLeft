@@ -2,26 +2,27 @@
     x:Class="PlayLeft.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:PlayLeft"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:UI="using:Microsoft.Advertising.WinRT.UI"
-    mc:Ignorable="d" Width="1980" Height="1080">
+    mc:Ignorable="d" Width="600" Height="300">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="1,18,1399,752" Height="310" Width="585">
-        <CommandBar x:Name="cbTop">
-            <CommandBar.Content>
-                <Grid/>
-            </CommandBar.Content>
-            <AppBarButton x:Name="abAbout" x:Uid="About"  Icon="Help" Click="abAbout_Click"/>
-        </CommandBar>
-        <TextBox x:Name="lblContSelected" HorizontalAlignment="Left" Margin="4,60,0,0" TextWrapping="Wrap" Text="lblContSelected" VerticalAlignment="Top" Width="564" FontSize="24" IsReadOnly="True" BorderThickness="0"/>
-        <TextBox x:Name="lblConnection" HorizontalAlignment="Left" Margin="4,105,0,0" TextWrapping="Wrap" Text="lblConnection" VerticalAlignment="Top" RenderTransformOrigin="0.19,0.109" Width="318" BorderThickness="0"/>
-        <TextBox x:Name="lblBatteryStatus" HorizontalAlignment="Left" Margin="4,142,0,0" TextWrapping="Wrap" Text="lblBatteryStatus" VerticalAlignment="Top" Width="318" BorderThickness="0"/>
-        <TextBox x:Name="lblFullChargeCap" HorizontalAlignment="Left" Margin="4,179,0,0" TextWrapping="Wrap" Text="lblFullChargeCap" VerticalAlignment="Top" Width="318" BorderThickness="0" IsReadOnly="True"/>
-        <TextBox x:Name="lblRemainingCap" HorizontalAlignment="Left" Margin="4,216,0,0" TextWrapping="Wrap" Text="lblRemainingCap" VerticalAlignment="Top" IsReadOnly="True" BorderThickness="0" Width="318"/>
-        <TextBox x:Name="txtPercentage" HorizontalAlignment="Left" Margin="361,137,0,0" TextWrapping="Wrap" Text="100%" VerticalAlignment="Top" Height="111" Width="210" IsReadOnly="True" FontSize="72"/>
-        <TextBox x:Name="lblPercentage" HorizontalAlignment="Left" Margin="351,101,0,0" TextWrapping="Wrap" x:Uid="PercentageRemaining" VerticalAlignment="Top" BorderThickness="0" IsReadOnly="True" FontSize="15" Width="176"/>
-        <UI:AdControl ApplicationId="9nss2jdkrlf8" AdUnitId="356375" Width="320" Height="50" Margin="14,250,266,10" RenderTransformOrigin="0.259,0.46"/>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBox x:Name="lblContSelected" IsReadOnly="True" Margin="0,10,0,0" TextWrapping="Wrap"
+                 Text="lblContSelected" VerticalAlignment="Top" FontSize="24" BorderThickness="0"
+                 HorizontalAlignment="Center" />
+        <TextBox x:Name="lblConnection" IsReadOnly="True" HorizontalAlignment="Left" Margin="10,56,0,0"
+                 TextWrapping="Wrap" Text="lblConnection" VerticalAlignment="Top" RenderTransformOrigin="0.19,0.109"
+                 Width="365" BorderThickness="0" />
+        <TextBox x:Name="lblBatteryStatus" IsReadOnly="True" HorizontalAlignment="Left" Margin="10,93,0,0"
+                 TextWrapping="Wrap" Text="lblBatteryStatus" VerticalAlignment="Top" Width="365" BorderThickness="0" />
+        <TextBox x:Name="lblFullChargeCap" IsReadOnly="True" HorizontalAlignment="Left" Margin="10,130,0,0"
+                 TextWrapping="Wrap" Text="lblFullChargeCap" VerticalAlignment="Top" Width="365" BorderThickness="0" />
+        <TextBox x:Name="lblRemainingCap" IsReadOnly="True" HorizontalAlignment="Left" Margin="10,167,0,0"
+                 TextWrapping="Wrap" Text="lblRemainingCap" VerticalAlignment="Top" BorderThickness="0" Width="365" />
+        <TextBox x:Name="txtPercentage" IsReadOnly="True" HorizontalAlignment="Right" TextWrapping="Wrap" Text="100%"
+                 VerticalAlignment="Top" Height="111" Width="210" FontSize="72" Margin="0,88,10,0" />
+        <TextBox x:Name="lblPercentage" IsReadOnly="True" HorizontalAlignment="Right" TextAlignment="Center"
+                 Margin="0,56,10,0" TextWrapping="Wrap" x:Uid="PercentageRemaining" VerticalAlignment="Top"
+                 BorderThickness="0" FontSize="15" Width="210" />
     </Grid>
 </Page>

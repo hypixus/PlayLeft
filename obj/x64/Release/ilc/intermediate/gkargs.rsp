@@ -1,0 +1,8 @@
+﻿"C:\Users\master\source\repos\PlayLeft\obj\x64\Release\ilc\in\Microsoft.Toolkit.Uwp.Notifications.dll"
+"C:\Users\master\source\repos\PlayLeft\obj\x64\Release\ilc\in\PlayLeft.exe"
+/Lib:"C:\Users\master\source\repos\PlayLeft\obj\x64\Release\ilc\in"
+/Lib:"C:\Program Files (x86)\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.native.compiler\2.2.10-rel-29722-00\tools\x64\ilc\lib\Private"
+/WinMD:"C:\Users\master\source\repos\PlayLeft\obj\x64\Release\ilc\in\WinMetadata\Windows.winmd"
+/VSTelemetrySessionSettings:"{\"IsOptedIn\":false,\"HostName\":\"Dev14\",\"AppInsightsInstrumentationKey\":\"f144292e-e3b2-4011-ac90-20e5c03fbce5\",\"AsimovInstrumentationKey\":\"AIF-312cbd79-9dbb-4c48-a7da-3cc2a931cb70\",\"AppId\":1001,\"UserId\":\"1fd142c2-bcdb-412d-88ec-50f36a6487c8\",\"Id\":\"6d915a4d-5f15-4be7-97b4-91f8d5bb950b\",\"ProcessStartTime\":637555089815415198}"
+/RdXmlPath:"C:\Program Files (x86)\Microsoft SDKs\UWPNuGetPackages\microsoft.net.native.compiler\2.2.10-rel-29722-00\tools\LibraryXML"
+/RunOnlyPreDR

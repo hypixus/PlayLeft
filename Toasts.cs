@@ -2,67 +2,55 @@
  * PlayLeft Small application to get the battery level of your Xbox Controller as a UWP app.
  * First UWP as such just learing how the platform works.
  * Released under GPL3, Developed by Spoonie_au.
+ *
+ * Fork changes:
+ * Complete redesign of the class, to optimize it and eliminate redundant code.
+ * Moved away from explicit variables naming.
  */
 
+using System;
 using Windows.ApplicationModel.Resources;
+using Windows.Data.Xml.Dom;
 using Windows.UI.Notifications;
 
 namespace PlayLeft
 {
-    class Toasts
+    public static class Toasts
     {
-        public void addToast()
+        public enum ToastType
         {
-            //Load localized string
-            var resourceLoader = ResourceLoader.GetForCurrentView();
-
-            //Contents of addToast
-            var templateAdd = "<toast launch=\"app-defined-string\">" +
-                              "<visual>" +
-                              "<binding template =\"ToastGeneric\">" +
-                              "<text>" + resourceLoader.GetString("AppDisplayName") + "</text>" +
-                              "<text>" + resourceLoader.GetString("ControllerConnected") + "</text>" +
-                              "</binding>" +
-                              "</visual>" +
-                              "</toast>";
-
-            //Create and show Toast
-            var xmlAddToast = new Windows.Data.Xml.Dom.XmlDocument();
-            xmlAddToast.LoadXml(templateAdd);
-
-            var showAddToast = new ToastNotification(xmlAddToast);
-            var toast = ToastNotificationManager.CreateToastNotifier();
-
-
-            toast.Show(showAddToast);
-
-
+            ControllerConnected,
+            ControllerDisconnected
         }
 
-        public void removeToast()
+        public static void GenerateToast(ToastType type)
         {
-            //Load localized string
+            // Load localized string
             var resourceLoader = ResourceLoader.GetForCurrentView();
+            // Contents of the toast
+            string template;
 
+            switch (type)
+            {
+                case ToastType.ControllerConnected:
+                    template =
+                        $"<toast launch=\"app-defined-string\"><visual><binding template =\"ToastGeneric\"><text>{resourceLoader.GetString("AppDisplayName")}</text><text>{resourceLoader.GetString("ControllerConnected")}</text></binding></visual></toast>";
+                    break;
+                case ToastType.ControllerDisconnected:
+                    template =
+                        $"<toast launch=\"app-defined-string\"><visual><binding template =\"ToastGeneric\"><text>{resourceLoader.GetString("AppDisplayName")}</text><text>{resourceLoader.GetString("ControllerDisconnected")}</text></binding></visual></toast>";
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(type), type, null);
+            }
 
-            //Contents of RemoveToast
-            var templateRemove = "<toast launch=\"app-defined-string\">" +
-                                 "<visual>" +
-                                 "<binding template =\"ToastGeneric\">" +
-                                 "<text>"+ resourceLoader.GetString("AppDisplayName") + "</text>" +
-                                 "<text>" + resourceLoader.GetString("ControllerDisconnected") + "</text>" +
-                                 "</binding>" +
-                                 "</visual>" +
-                                 "</toast>";
+            var xmlToast = new XmlDocument();
+            xmlToast.LoadXml(template);
 
-            //Create and show Toast
-            var xmlRemoveToast = new Windows.Data.Xml.Dom.XmlDocument();
-            xmlRemoveToast.LoadXml(templateRemove);
+            var notification = new ToastNotification(xmlToast);
+            var notifier = ToastNotificationManager.CreateToastNotifier();
 
-            var showRemoveToast = new ToastNotification(xmlRemoveToast);
-            var toast = ToastNotificationManager.CreateToastNotifier();
-
-            toast.Show(showRemoveToast);
+            notifier.Show(notification);
         }
     }
 }

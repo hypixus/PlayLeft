@@ -171,7 +171,7 @@ Quelle verfügbar unter</value>
     <value>Eine Anwendung zur Überwachung des Akkuladezustands Ihres kabellosen Xbox 360- oder Xbox One-Controllers.</value>
     <comment>Description</comment>
   </data>
-  <data name="FullCapacipty" xml:space="preserve">
+  <data name="FullCapacity" xml:space="preserve">
     <value>Volle Ladekapazität</value>
     <comment>Full charge capacipty</comment>
   </data>
@@ -183,7 +183,7 @@ Quelle verfügbar unter</value>
     <value>Prozent verbleibend</value>
     <comment>Label Percentage Remaining</comment>
   </data>
-  <data name="RemainingCapacipty" xml:space="preserve">
+  <data name="RemainingCapacity" xml:space="preserve">
     <value>Restliche Ladungskapazität</value>
     <comment>Remaining charge capacipty</comment>
   </data>

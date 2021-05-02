@@ -171,7 +171,7 @@ Kilde tilgængelig på</value>
     <value>En applikation til at overvåge batteriniveauet på din trådløse Xbox 360 eller Xbox One-controller.</value>
     <comment>Description</comment>
   </data>
-  <data name="FullCapacipty" xml:space="preserve">
+  <data name="FullCapacity" xml:space="preserve">
     <value>Fuld opladningskapacitet</value>
     <comment>Full charge capacipty</comment>
   </data>
@@ -183,7 +183,7 @@ Kilde tilgængelig på</value>
     <value>Andel tilbageværende</value>
     <comment>Label Percentage Remaining</comment>
   </data>
-  <data name="RemainingCapacipty" xml:space="preserve">
+  <data name="RemainingCapacity" xml:space="preserve">
     <value>Resterende ladningskapacitet</value>
     <comment>Remaining charge capacipty</comment>
   </data>

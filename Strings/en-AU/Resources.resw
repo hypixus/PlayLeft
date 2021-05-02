@@ -171,7 +171,7 @@ Source available at</value>
     <value>An application to monitor the battery level of your wireless Xbox360 or XboxOne controller.</value>
     <comment>Description</comment>
   </data>
-  <data name="FullCapacipty" xml:space="preserve">
+  <data name="FullCapacity" xml:space="preserve">
     <value>Full charge capacipty</value>
     <comment>Full charge capacipty</comment>
   </data>
@@ -183,7 +183,7 @@ Source available at</value>
     <value>Percentage Remaining</value>
     <comment>Label Percentage Remaining</comment>
   </data>
-  <data name="RemainingCapacipty" xml:space="preserve">
+  <data name="RemainingCapacity" xml:space="preserve">
     <value>Remaining charge capacipty</value>
     <comment>Remaining charge capacipty</comment>
   </data>

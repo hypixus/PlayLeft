@@ -1,0 +1,17 @@
+﻿/osver:6.2
+/appcontainer
+"/runtime:mrt100_app"
+/eh:clr
+/pdb
+"/nativeLink:C:\Program Files (x86)\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.native.compiler\2.2.10-rel-29722-00\tools\x64\ilc\lib\Native\vmath.lib"
+/customImports
+/methodBodyFolding
+"C:\Users\master\source\repos\PlayLeft\obj\x64\Release\ilc\intermediate\MDIL\PlayLeft.mdilexe"
+"/i:C:\Users\master\source\repos\PlayLeft\obj\x64\Release\ilc\intermediate\MDIL"
+"/out:C:\Users\master\source\repos\PlayLeft\obj\x64\Release\ilc\intermediate\Native\PlayLeft.exe"
+"/pdbAltPath:C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc"
+"/res:C:\Users\master\source\repos\PlayLeft\obj\x64\Release\ilc\intermediate\Native.res"
+"/i:C:\Program Files (x86)\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.native.sharedlibrary\2.2.8-rel-29722-00\tools\SharedLibrary\ret\MDIL"
+/shimexe
+"/classlib:SharedLibrary"
+"/sourcelink:C:\Users\master\source\repos\PlayLeft\obj\x64\Release\ilc\intermediate\ILTransformed\Microsoft.Toolkit.Uwp.Notifications.srclink"

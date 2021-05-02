@@ -171,7 +171,7 @@ Zdroj dostupný na adrese</value>
     <value>Aplikace pro monitorování úrovně nabití bezdrátového ovladače Xbox 360 nebo Xbox One.</value>
     <comment>Description</comment>
   </data>
-  <data name="FullCapacipty" xml:space="preserve">
+  <data name="FullCapacity" xml:space="preserve">
     <value>Plná kapacita nabíjení</value>
     <comment>Full charge capacipty</comment>
   </data>
@@ -183,7 +183,7 @@ Zdroj dostupný na adrese</value>
     <value>Zbývající procento</value>
     <comment>Label Percentage Remaining</comment>
   </data>
-  <data name="RemainingCapacipty" xml:space="preserve">
+  <data name="RemainingCapacity" xml:space="preserve">
     <value>Kapacita zbývajícího náboje</value>
     <comment>Remaining charge capacipty</comment>
   </data>

@@ -1,6 +1,5 @@
-﻿using System.Resources;
-using System.Reflection;
-using System.Runtime.CompilerServices;
+﻿using System.Reflection;
+using System.Resources;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
@@ -21,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyFileVersion("1.3.0.0")]
 [assembly: ComVisible(false)]
 [assembly: AssemblyTitleAttribute("PlayLeft")]
-[assembly: AssemblyDescriptionAttribute("A small utility to display the battery status from you wireless XBOX controller.")]
+[assembly:
+    AssemblyDescriptionAttribute("A small utility to display the battery status from you wireless XBOX controller.")]
 [assembly: AssemblyCompanyAttribute("System86")]
 [assembly: NeutralResourcesLanguageAttribute("en-US")]
-
