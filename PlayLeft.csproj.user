@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Source>F:\projects\PlayLeft\tilebase.png</Source>
-    <SmallTileSource>F:\projects\PlayLeft\tilebase.png</SmallTileSource>
-    <MediumTileSource>F:\projects\PlayLeft\tilebase.png</MediumTileSource>
-    <WideTileSource>F:\projects\PlayLeft\tilebase.png</WideTileSource>
-    <LargeTileSource>F:\projects\PlayLeft\tilebase.png</LargeTileSource>
-    <AppIconSource>F:\projects\PlayLeft\tilebase.png</AppIconSource>
-    <SplashScreenSource>F:\projects\PlayLeft\tilebase.png</SplashScreenSource>
-    <BadgeLogoSource>F:\projects\PlayLeft\tilebase.png</BadgeLogoSource>
-    <PackageLogoSource>F:\projects\PlayLeft\tilebase.png</PackageLogoSource>
+    <Source>C:\Users\master\Desktop\icon.png</Source>
+    <SmallTileSource>C:\Users\master\Desktop\icon.png</SmallTileSource>
+    <MediumTileSource>C:\Users\master\Desktop\icon.png</MediumTileSource>
+    <WideTileSource>C:\Users\master\Desktop\icon.png</WideTileSource>
+    <LargeTileSource>C:\Users\master\Desktop\icon.png</LargeTileSource>
+    <AppIconSource>C:\Users\master\Desktop\icon.png</AppIconSource>
+    <SplashScreenSource>C:\Users\master\Desktop\icon.png</SplashScreenSource>
+    <BadgeLogoSource>C:\Users\master\Desktop\icon.png</BadgeLogoSource>
+    <PackageLogoSource>C:\Users\master\Desktop\icon.png</PackageLogoSource>
     <AppxShowAllApps>False</AppxShowAllApps>
     <AppxPackageIsForStore>True</AppxPackageIsForStore>
     <AppxBuildConfigurationSelection>x86|x64|arm</AppxBuildConfigurationSelection>

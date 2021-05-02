@@ -1,3 +1,4 @@
+AlternateForm=LIGHTUNPLATED
 AlternateForm=UNPLATED
 Scale=200
 Scale=400
