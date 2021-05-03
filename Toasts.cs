@@ -9,7 +9,6 @@
  */
 
 using System;
-using Windows.ApplicationModel.Resources;
 using Windows.Data.Xml.Dom;
 using Windows.UI.Notifications;
 
@@ -25,8 +24,6 @@ namespace PlayLeft
 
         public static void GenerateToast(ToastType type)
         {
-            // Load localized string
-            var resourceLoader = ResourceLoader.GetForCurrentView();
             // Contents of the toast
             string template;
 
@@ -34,11 +31,11 @@ namespace PlayLeft
             {
                 case ToastType.ControllerConnected:
                     template =
-                        $"<toast launch=\"app-defined-string\"><visual><binding template =\"ToastGeneric\"><text>{resourceLoader.GetString("AppDisplayName")}</text><text>{resourceLoader.GetString("ControllerConnected")}</text></binding></visual></toast>";
+                        $"<toast launch=\"app-defined-string\"><visual><binding template =\"ToastGeneric\"><text>{"PlayLeft"}</text><text>{"Controller is connected."}</text></binding></visual></toast>";
                     break;
                 case ToastType.ControllerDisconnected:
                     template =
-                        $"<toast launch=\"app-defined-string\"><visual><binding template =\"ToastGeneric\"><text>{resourceLoader.GetString("AppDisplayName")}</text><text>{resourceLoader.GetString("ControllerDisconnected")}</text></binding></visual></toast>";
+                        $"<toast launch=\"app-defined-string\"><visual><binding template =\"ToastGeneric\"><text>{"PlayLeft"}</text><text>{"Controller was disconnected."}</text></binding></visual></toast>";
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(type), type, null);

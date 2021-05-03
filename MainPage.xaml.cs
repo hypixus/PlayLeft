@@ -12,7 +12,6 @@
 
 using System;
 using System.Threading.Tasks;
-using Windows.ApplicationModel.Resources;
 using Windows.Foundation;
 using Windows.Gaming.Input;
 using Windows.System.Power;
@@ -32,8 +31,9 @@ namespace PlayLeft
         private const int UpdateFrequency = 500;
         private string _batteryStatus = "";
 
+
+        private Gamepad _controller;
         private string _fullChargeCapacity = "";
-        private Gamepad _gamepad;
         private string _remainingCapacity = "";
         private bool _wirelessConnected;
 
@@ -41,67 +41,53 @@ namespace PlayLeft
         {
             InitializeComponent();
 
-            //Set the window size.
-            ApplicationView.PreferredLaunchViewSize = new Size(600, 300);
+            // Set the window size.
+            ApplicationView.PreferredLaunchViewSize = new Size(640, 480);
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
 
             LoadDefaultUi();
 
-            ControllerLoop();
-        }
-
-        private void LoadDefaultUi()
-        {
-            //Load localized string
-            var resourceLoader = ResourceLoader.GetForCurrentView();
-            lblContSelected.Text = resourceLoader.GetString("NoController");
-
-            lblConnection.Text = "";
-            lblBatteryStatus.Text = "";
-            lblFullChargeCap.Text = "";
-            lblRemainingCap.Text = "";
-            txtPercentage.Text = "";
-        }
-
-        private async void ControllerLoop()
-        {
-            //Set Add/Remove actions.
+            // Attach event handlers.
             Gamepad.GamepadAdded += ControllerConnected;
             Gamepad.GamepadRemoved += ControllerDisconnected;
 
+            ControllerLoop();
+        }
+
+
+        private async void ControllerLoop()
+        {
             while (true)
             {
                 await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
                 {
-                    //If no game pad found.
-                    if (_gamepad == null) return;
+                    // If no game pad found, skip to next iteration.
+                    if (_controller == null) return;
 
-                    //Can not handle more than one controller, will support 4 controllers once I can work out how to identify controllers.
+                    // Cannot handle more than one controller yet, will support 4 controllers once I can work out how to identify controllers.
                     if (Gamepad.Gamepads.Count > 1)
                         // TODO
                         return;
 
                     // Get the current state.
-                    _wirelessConnected = _gamepad.IsWireless;
+                    _wirelessConnected = _controller.IsWireless;
 
                     // Get battery status.
-                    var controllerBattery = _gamepad.TryGetBatteryReport();
+                    var controllerBattery = _controller.TryGetBatteryReport();
 
-                    // Get battery state and retrieve the correct localization string
-                    var resourceLoader = ResourceLoader.GetForCurrentView();
                     switch (controllerBattery.Status)
                     {
                         case BatteryStatus.Charging:
-                            _batteryStatus = resourceLoader.GetString("BatteryStatusCharging");
+                            _batteryStatus = "charging";
                             break;
                         case BatteryStatus.Discharging:
-                            _batteryStatus = resourceLoader.GetString("BatteryStatusDischarging");
+                            _batteryStatus = "discharging";
                             break;
                         case BatteryStatus.Idle:
-                            _batteryStatus = resourceLoader.GetString("BatteryStatusIdle");
+                            _batteryStatus = "idle";
                             break;
                         case BatteryStatus.NotPresent:
-                            _batteryStatus = resourceLoader.GetString("BatteryStatusNotPresent");
+                            _batteryStatus = "not present";
                             break;
                         default:
                             throw new ArgumentOutOfRangeException();
@@ -111,13 +97,23 @@ namespace PlayLeft
                     {
                         _fullChargeCapacity = "0";
                         _remainingCapacity = "0";
-                        NoBatteryUi(ref resourceLoader);
+                        NoBatteryUi();
                     }
                     else
                     {
-                        _fullChargeCapacity = controllerBattery.FullChargeCapacityInMilliwattHours?.ToString();
-                        _remainingCapacity = controllerBattery.RemainingCapacityInMilliwattHours?.ToString();
-                        UpdateUiDetails(ref resourceLoader);
+                        if (controllerBattery.FullChargeCapacityInMilliwattHours != null &&
+                            controllerBattery.RemainingCapacityInMilliwattHours != null)
+                        {
+                            _fullChargeCapacity = controllerBattery.FullChargeCapacityInMilliwattHours.ToString();
+                            _remainingCapacity = controllerBattery.RemainingCapacityInMilliwattHours.ToString();
+                        }
+                        else
+                        {
+                            _fullChargeCapacity = "0";
+                            _remainingCapacity = "0";
+                        }
+
+                        UpdateUiDetails();
                     }
                 });
                 //set time in ms to check.
@@ -126,43 +122,56 @@ namespace PlayLeft
             // ReSharper disable once FunctionNeverReturns
         }
 
-        private void UpdateUiDetails(ref ResourceLoader rsLoader)
+        private void UpdateUiDetails()
         {
-            lblContSelected.Text = rsLoader.GetString("ControllerConnected");
+            LblContSelected.Text = "Controller connected.";
 
             // Fetch resource for proper connection type.
-            lblConnection.Text = _wirelessConnected
-                ? rsLoader.GetString("ConnectedViaWireless")
-                : rsLoader.GetString("ConnectedViaCable");
+            LblConnection.Text = _wirelessConnected
+                ? "Device is connected via wireless."
+                : "Device is connected via cable.";
 
-            lblBatteryStatus.Text = rsLoader.GetString("BatteryState") + " " + _batteryStatus;
-            lblFullChargeCap.Text = rsLoader.GetString("FullCapacity") + " " + _fullChargeCapacity + "mWh";
-            lblRemainingCap.Text = rsLoader.GetString("RemainingCapacity") + " " + _remainingCapacity + "mWh";
+            LblBatteryStatus.Text = "Battery is " + _batteryStatus + ".";
+            LblFullChargeCap.Text = "Maximum capacity is " + _fullChargeCapacity + "mWh.";
+            LblRemainingCap.Text = "Remaining capacity is " + _remainingCapacity + "mWh.";
+            LblPercentage.Text = "Remaining percentage";
 
             // Calculate remaining percentage and display it.
-            txtPercentage.Text = CalculatePercentage(_remainingCapacity, _fullChargeCapacity);
+            TxtPercentage.Text = CalculatePercentage(_remainingCapacity, _fullChargeCapacity);
         }
 
-        private void NoBatteryUi(ref ResourceLoader rsLoader)
+        private void NoBatteryUi()
         {
-            lblContSelected.Text = rsLoader.GetString("ControllerConnected");
+            LblContSelected.Text = "Controller without a battery connected.";
 
             // Fetch resource for proper connection type.
-            lblConnection.Text = _wirelessConnected
-                ? rsLoader.GetString("ConnectedViaWireless")
-                : rsLoader.GetString("ConnectedViaCable");
+            LblConnection.Text = _wirelessConnected
+                ? "Device is connected via wireless connection."
+                : "Device is connected via cable connection.";
 
-            lblBatteryStatus.Text = rsLoader.GetString("BatteryState") + " None";
-            lblFullChargeCap.Text = rsLoader.GetString("FullCapacity") + " None";
-            lblRemainingCap.Text = rsLoader.GetString("RemainingCapacity") + " None";
+            LblBatteryStatus.Text = "Battery was not found.";
+            LblFullChargeCap.Text = "Maximum capacity is None.";
+            LblRemainingCap.Text = "Remaining capacity is None.";
+            LblPercentage.Text = "Remaining percentage";
 
-            // Calculate remaining percentage and display it.
-            txtPercentage.Text = "None";
+            TxtPercentage.Text = "None";
+        }
+
+        private void LoadDefaultUi()
+        {
+            LblContSelected.Text = "No controller is detected.";
+
+            LblConnection.Text = "";
+            LblBatteryStatus.Text = "";
+            LblFullChargeCap.Text = "";
+            LblRemainingCap.Text = "";
+            LblPercentage.Text = "";
+            TxtPercentage.Text = "";
         }
 
         private async void ControllerDisconnected(object sender, Gamepad e)
         {
-            _gamepad = null;
+            _controller = null;
 
             await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
             {
@@ -170,30 +179,23 @@ namespace PlayLeft
                 if (Gamepad.Gamepads.Count > 1)
                     // TODO
                     return;
-                if (Gamepad.Gamepads.Count == 0)
-                {
-                    var resourceLoader = ResourceLoader.GetForCurrentView();
-                    lblContSelected.Text = resourceLoader.GetString("NoController");
-                    lblConnection.Text = "";
-                    lblBatteryStatus.Text = "";
-                    lblFullChargeCap.Text = "";
-                    lblRemainingCap.Text = "";
-                    txtPercentage.Text = "";
+                if (Gamepad.Gamepads.Count != 0) return;
 
-                    GenerateToast(ToastType.ControllerDisconnected);
-                }
+                LoadDefaultUi();
+
+                GenerateToast(ToastType.ControllerDisconnected);
             });
         }
 
         private async void ControllerConnected(object sender, Gamepad e)
         {
-            _gamepad = e;
+            _controller = e;
 
             await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
             {
-                //If controllers count is larger than one, do noting. Will support 4 controllers once I can work out how to identify controllers.
+                // If controllers count is larger than one, do noting. Will support 4 controllers once I can work out how to identify controllers.
                 if (Gamepad.Gamepads.Count > 1) return;
-
+                // TODO
                 GenerateToast(ToastType.ControllerConnected);
             });
         }

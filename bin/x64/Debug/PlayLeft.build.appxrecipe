@@ -9,7 +9,7 @@
     <SolutionConfiguration>Debug|x64</SolutionConfiguration>
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>173b9636-ffb3-4246-986c-1a4e5043ae8e</PackageIdentityName>
-    <PackageIdentityPublisher>CN=B8A6AD91-7058-46D6-AE53-2E281625D54B</PackageIdentityPublisher>
+    <PackageIdentityPublisher>CN=Hypixus</PackageIdentityPublisher>
     <IntermediateOutputPath>C:\Users\master\source\repos\PlayLeft\obj\x64\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>

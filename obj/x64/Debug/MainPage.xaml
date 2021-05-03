@@ -4,26 +4,27 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Width="600" Height="300">
+    mc:Ignorable="d" Width="640" Height="480">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBox x:ConnectionId='2' x:Name="lblContSelected" IsReadOnly="True" Margin="0,10,0,0" TextWrapping="Wrap"
-                 Text="lblContSelected" VerticalAlignment="Top" FontSize="24" BorderThickness="0"
-                 HorizontalAlignment="Center" />
-        <TextBox x:ConnectionId='3' x:Name="lblConnection" IsReadOnly="True" HorizontalAlignment="Left" Margin="10,56,0,0"
-                 TextWrapping="Wrap" Text="lblConnection" VerticalAlignment="Top" RenderTransformOrigin="0.19,0.109"
-                 Width="365" BorderThickness="0" />
-        <TextBox x:ConnectionId='4' x:Name="lblBatteryStatus" IsReadOnly="True" HorizontalAlignment="Left" Margin="10,93,0,0"
-                 TextWrapping="Wrap" Text="lblBatteryStatus" VerticalAlignment="Top" Width="365" BorderThickness="0" />
-        <TextBox x:ConnectionId='5' x:Name="lblFullChargeCap" IsReadOnly="True" HorizontalAlignment="Left" Margin="10,130,0,0"
-                 TextWrapping="Wrap" Text="lblFullChargeCap" VerticalAlignment="Top" Width="365" BorderThickness="0" />
-        <TextBox x:ConnectionId='6' x:Name="lblRemainingCap" IsReadOnly="True" HorizontalAlignment="Left" Margin="10,167,0,0"
-                 TextWrapping="Wrap" Text="lblRemainingCap" VerticalAlignment="Top" BorderThickness="0" Width="365" />
-        <TextBox x:ConnectionId='7' x:Name="txtPercentage" IsReadOnly="True" HorizontalAlignment="Right" TextWrapping="Wrap" Text="100%"
-                 VerticalAlignment="Top" Height="111" Width="210" FontSize="72" Margin="0,88,10,0" />
-        <TextBox x:ConnectionId='8' x:Name="lblPercentage" IsReadOnly="True" HorizontalAlignment="Right" TextAlignment="Center"
-                 Margin="0,56,10,0" TextWrapping="Wrap" x:Uid="PercentageRemaining" VerticalAlignment="Top"
-                 BorderThickness="0" FontSize="15" Width="210" />
+        <TextBlock x:ConnectionId='2' x:Name="LblContSelected" Margin="0,10,0,0" TextWrapping="Wrap"
+                   Text="LblContSelected" VerticalAlignment="Top" FontSize="36"
+                   HorizontalAlignment="Center" FontFamily="Segoe UI Black" />
+        <TextBlock x:ConnectionId='3' x:Name="LblConnection" HorizontalAlignment="Left" Margin="10,75,0,0"
+                   TextWrapping="Wrap" Text="LblConnection" VerticalAlignment="Top"
+                   Width="365" FontSize="24" />
+        <TextBlock x:ConnectionId='4' x:Name="LblBatteryStatus" HorizontalAlignment="Left" Margin="10,112,0,0"
+                   TextWrapping="Wrap" Text="LblBatteryStatus" VerticalAlignment="Top" Width="365" FontSize="24" />
+        <TextBlock x:ConnectionId='5' x:Name="LblFullChargeCap" HorizontalAlignment="Left" Margin="10,149,0,0"
+                   TextWrapping="Wrap" Text="LblFullChargeCap" VerticalAlignment="Top" Width="365" FontSize="24" />
+        <TextBlock x:ConnectionId='6' x:Name="LblRemainingCap" HorizontalAlignment="Left" Margin="10,186,0,0"
+                   TextWrapping="Wrap" Text="LblRemainingCap" VerticalAlignment="Top" Width="365" FontSize="24" />
+        <TextBlock x:ConnectionId='7' x:Name="TxtPercentage" HorizontalAlignment="Right" TextWrapping="Wrap" Text="100%"
+                   VerticalAlignment="Top" Height="100" Width="200" FontSize="72" Margin="0,108,10,0"
+                   TextAlignment="Center" HorizontalTextAlignment="Center"/>
+        <TextBlock x:ConnectionId='8' x:Name="LblPercentage" HorizontalAlignment="Right" TextAlignment="Center"
+                   Margin="0,79,10,0" TextWrapping="Wrap" VerticalAlignment="Top"
+                   FontSize="18" Width="210" Text="LblPercentage" />
     </Grid>
 </Page>
 

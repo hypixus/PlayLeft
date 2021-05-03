@@ -9,7 +9,7 @@
     <SolutionConfiguration>Release|x64</SolutionConfiguration>
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>173b9636-ffb3-4246-986c-1a4e5043ae8e</PackageIdentityName>
-    <PackageIdentityPublisher>CN=B8A6AD91-7058-46D6-AE53-2E281625D54B</PackageIdentityPublisher>
+    <PackageIdentityPublisher>CN=Hypixus</PackageIdentityPublisher>
     <IntermediateOutputPath>C:\Users\master\source\repos\PlayLeft\obj\x64\Release\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
@@ -19,270 +19,295 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\master\source\repos\PlayLeft\bin\x64\Release\AppX</LayoutDir>
-    <RegisteredManifestChecksum>0B62247045D6BACC4A32DD13B5447EBE261F0D122F4D345F3CB4486E3A6A81CB</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>2227System86.PlayLeft_1.4.0.0_x64__cp2tnnd9cqvey</RegisteredPackageMoniker>
-    <RegisteredUserModeAppID>2227System86.PlayLeft_cp2tnnd9cqvey!App</RegisteredUserModeAppID>
-    <RegisteredPackageID>2227System86.PlayLeft</RegisteredPackageID>
-    <RegisteredPackagePublisher>CN=B8A6AD91-7058-46D6-AE53-2E281625D54B</RegisteredPackagePublisher>
-    <RegisteredVersion>1.4.0.0</RegisteredVersion>
+    <RegisteredManifestChecksum>C7D13DB25302A33882827085AAD18292805BA06DF96CF610651593D878E1CEB2</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>Hypixus.PlayLeft_1.5.0.0_x64__evwjykxwa7480</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>Hypixus.PlayLeft_evwjykxwa7480!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>Hypixus.PlayLeft</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Hypixus</RegisteredPackagePublisher>
+    <RegisteredVersion>1.5.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T23:47:58.647</Modified>
+      <Modified>2021-05-03T23:45:23.182</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\BadgeLogo.scale-100.png">
       <PackagePath>Assets\BadgeLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.172</Modified>
+      <Modified>2021-05-02T01:17:28.903</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\BadgeLogo.scale-125.png">
       <PackagePath>Assets\BadgeLogo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.172</Modified>
+      <Modified>2021-05-02T01:17:28.910</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\BadgeLogo.scale-150.png">
       <PackagePath>Assets\BadgeLogo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.172</Modified>
+      <Modified>2021-05-02T01:17:28.917</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\BadgeLogo.scale-200.png">
       <PackagePath>Assets\BadgeLogo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.173</Modified>
+      <Modified>2021-05-02T01:17:28.929</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\BadgeLogo.scale-400.png">
       <PackagePath>Assets\BadgeLogo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.173</Modified>
+      <Modified>2021-05-02T01:17:28.943</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.173</Modified>
+      <Modified>2021-05-02T01:17:28.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\LargeTile.scale-125.png">
       <PackagePath>Assets\LargeTile.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.173</Modified>
+      <Modified>2021-05-02T01:17:28.021</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\LargeTile.scale-150.png">
       <PackagePath>Assets\LargeTile.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.173</Modified>
+      <Modified>2021-05-02T01:17:28.047</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\LargeTile.scale-200.png">
       <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.174</Modified>
+      <Modified>2021-05-02T01:17:28.095</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\LargeTile.scale-400.png">
       <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.175</Modified>
+      <Modified>2021-05-02T01:17:28.245</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\SmallTile.scale-100.png">
       <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.175</Modified>
+      <Modified>2021-05-02T01:17:27.706</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\SmallTile.scale-125.png">
       <PackagePath>Assets\SmallTile.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.175</Modified>
+      <Modified>2021-05-02T01:17:27.715</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\SmallTile.scale-150.png">
       <PackagePath>Assets\SmallTile.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.176</Modified>
+      <Modified>2021-05-02T01:17:27.728</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\SmallTile.scale-200.png">
       <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.176</Modified>
+      <Modified>2021-05-02T01:17:27.737</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\SmallTile.scale-400.png">
       <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.176</Modified>
+      <Modified>2021-05-02T01:17:27.757</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.177</Modified>
+      <Modified>2021-05-02T01:17:28.463</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\SplashScreen.scale-125.png">
       <PackagePath>Assets\SplashScreen.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.177</Modified>
+      <Modified>2021-05-02T01:17:28.497</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\SplashScreen.scale-150.png">
       <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.177</Modified>
+      <Modified>2021-05-02T01:17:28.541</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.177</Modified>
+      <Modified>2021-05-02T01:17:28.616</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\SplashScreen.scale-400.png">
       <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.178</Modified>
+      <Modified>2021-05-02T01:17:28.896</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\Square150x150Logo.scale-100.png">
       <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.178</Modified>
+      <Modified>2021-05-02T01:17:27.766</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\Square150x150Logo.scale-125.png">
       <PackagePath>Assets\Square150x150Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.178</Modified>
+      <Modified>2021-05-02T01:17:27.776</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\Square150x150Logo.scale-150.png">
       <PackagePath>Assets\Square150x150Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.179</Modified>
+      <Modified>2021-05-02T01:17:27.787</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.179</Modified>
+      <Modified>2021-05-02T01:17:27.803</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\Square150x150Logo.scale-400.png">
       <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.180</Modified>
+      <Modified>2021-05-02T01:17:27.843</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-05-02T01:17:28.370</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-05-02T01:17:28.376</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-05-02T01:17:28.439</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-05-02T01:17:28.383</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-05-02T01:17:28.391</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.180</Modified>
+      <Modified>2021-05-02T01:17:28.328</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\Square44x44Logo.altform-unplated_targetsize-24.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-24.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.180</Modified>
+      <Modified>2021-05-02T01:17:28.334</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.181</Modified>
+      <Modified>2021-05-02T01:17:28.362</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-32.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.181</Modified>
+      <Modified>2021-05-02T01:17:28.340</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.181</Modified>
+      <Modified>2021-05-02T01:17:28.347</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\Square44x44Logo.scale-100.png">
       <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.181</Modified>
+      <Modified>2021-05-02T01:17:28.252</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\Square44x44Logo.scale-125.png">
       <PackagePath>Assets\Square44x44Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.182</Modified>
+      <Modified>2021-05-02T01:17:28.259</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\Square44x44Logo.scale-150.png">
       <PackagePath>Assets\Square44x44Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.182</Modified>
+      <Modified>2021-05-02T01:17:28.266</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.182</Modified>
+      <Modified>2021-05-02T01:17:28.273</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\Square44x44Logo.scale-400.png">
       <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.183</Modified>
+      <Modified>2021-05-02T01:17:28.283</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\Square44x44Logo.targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.183</Modified>
+      <Modified>2021-05-02T01:17:28.289</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\Square44x44Logo.targetsize-24.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.184</Modified>
+      <Modified>2021-05-02T01:17:28.295</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\Square44x44Logo.targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.184</Modified>
+      <Modified>2021-05-02T01:17:28.321</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\Square44x44Logo.targetsize-32.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-32.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.185</Modified>
+      <Modified>2021-05-02T01:17:28.302</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\Square44x44Logo.targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.185</Modified>
+      <Modified>2021-05-02T01:17:28.309</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.185</Modified>
+      <Modified>2021-05-02T01:17:28.950</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\StoreLogo.scale-125.png">
       <PackagePath>Assets\StoreLogo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.186</Modified>
+      <Modified>2021-05-02T01:17:28.957</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\StoreLogo.scale-150.png">
       <PackagePath>Assets\StoreLogo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.186</Modified>
+      <Modified>2021-05-02T01:17:28.964</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\StoreLogo.scale-200.png">
       <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.186</Modified>
+      <Modified>2021-05-02T01:17:28.972</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\StoreLogo.scale-400.png">
       <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.187</Modified>
+      <Modified>2021-05-02T01:17:28.983</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\Wide310x150Logo.scale-100.png">
       <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.187</Modified>
+      <Modified>2021-05-02T01:17:27.854</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\Wide310x150Logo.scale-125.png">
       <PackagePath>Assets\Wide310x150Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.187</Modified>
+      <Modified>2021-05-02T01:17:27.868</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\Wide310x150Logo.scale-150.png">
       <PackagePath>Assets\Wide310x150Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.188</Modified>
+      <Modified>2021-05-02T01:17:27.885</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.188</Modified>
+      <Modified>2021-05-02T01:17:27.908</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\Assets\Wide310x150Logo.scale-400.png">
       <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-01T22:03:13.188</Modified>
+      <Modified>2021-05-02T01:17:27.983</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\clrcompression.dll">
       <PackagePath>clrcompression.dll</PackagePath>
@@ -290,19 +315,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\PlayLeft.dll">
       <PackagePath>PlayLeft.dll</PackagePath>
-      <Modified>2021-05-01T23:47:58.414</Modified>
+      <Modified>2021-05-03T23:45:22.925</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\PlayLeft.exe">
       <PackagePath>PlayLeft.exe</PackagePath>
-      <Modified>2021-05-01T23:47:58.637</Modified>
+      <Modified>2021-05-03T23:45:23.170</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\PlayLeft.pdb">
       <PackagePath>PlayLeft.pdb</PackagePath>
-      <Modified>2021-05-01T23:47:58.636</Modified>
+      <Modified>2021-05-03T23:45:23.166</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Release\ilc\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2021-05-01T23:47:33.630</Modified>
+      <Modified>2021-05-03T23:45:04.717</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
