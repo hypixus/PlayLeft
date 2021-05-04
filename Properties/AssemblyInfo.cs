@@ -22,5 +22,5 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitleAttribute("PlayLeft")]
 [assembly:
     AssemblyDescriptionAttribute("A small utility to display the battery status from you wireless XBOX controller.")]
-[assembly: AssemblyCompanyAttribute("System86")]
+[assembly: AssemblyCompany("")]
 [assembly: NeutralResourcesLanguageAttribute("en-US")]
