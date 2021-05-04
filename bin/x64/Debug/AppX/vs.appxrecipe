@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-05-03T23:47:18.789</Modified>
+      <Modified>2021-05-04T00:24:33.745</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Debug\PlayLeft.exe">
       <PackagePath>entrypoint\PlayLeft.exe</PackagePath>
-      <Modified>2021-05-03T23:47:17.232</Modified>
+      <Modified>2021-05-04T00:24:32.850</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\.nuget\packages\microsoft.toolkit.uwp.notifications\7.0.1\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.Notifications.dll">
       <PackagePath>Microsoft.Toolkit.Uwp.Notifications.dll</PackagePath>
@@ -331,15 +331,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Debug\PlayLeft.xr.xml">
       <PackagePath>PlayLeft.xr.xml</PackagePath>
-      <Modified>2021-05-03T23:47:17.149</Modified>
+      <Modified>2021-05-04T00:24:11.006</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-05-03T23:47:17.156</Modified>
+      <Modified>2021-05-04T00:24:32.776</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2021-05-03T23:47:17.156</Modified>
+      <Modified>2021-05-04T00:24:32.777</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\X64\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -355,7 +355,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\master\source\repos\PlayLeft\bin\x64\Debug\Core\PlayLeft.exe">
       <PackagePath>PlayLeft.exe</PackagePath>
-      <Modified>2021-05-03T23:47:18.785</Modified>
+      <Modified>2021-05-04T00:24:33.741</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

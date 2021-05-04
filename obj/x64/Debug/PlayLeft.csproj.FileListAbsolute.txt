@@ -45,3 +45,4 @@ C:\Users\master\source\repos\PlayLeft\obj\x64\Debug\qualifiers.txt.intermediate
 C:\Users\master\source\repos\PlayLeft\obj\x64\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\master\source\repos\PlayLeft\obj\x64\Debug\ProjectArchitectures.txt
 C:\Users\master\source\repos\PlayLeft\obj\x64\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424743200000000.json
+C:\Users\master\source\repos\PlayLeft\obj\x64\Debug\PlayLeft.csproj.AssemblyReference.cache

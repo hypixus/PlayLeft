@@ -14,6 +14,7 @@ using System;
 using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Gaming.Input;
+using Windows.Storage.Provider;
 using Windows.System.Power;
 using Windows.UI.Core;
 using Windows.UI.ViewManagement;
@@ -45,7 +46,7 @@ namespace PlayLeft
             ApplicationView.PreferredLaunchViewSize = new Size(640, 480);
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
 
-            LoadDefaultUi();
+            UpdateUi(UiScenarios.Default);
 
             // Attach event handlers.
             Gamepad.GamepadAdded += ControllerConnected;
@@ -97,7 +98,7 @@ namespace PlayLeft
                     {
                         _fullChargeCapacity = "0";
                         _remainingCapacity = "0";
-                        NoBatteryUi();
+                        UpdateUi(UiScenarios.WithoutBattery);
                     }
                     else
                     {
@@ -106,14 +107,14 @@ namespace PlayLeft
                         {
                             _fullChargeCapacity = controllerBattery.FullChargeCapacityInMilliwattHours.ToString();
                             _remainingCapacity = controllerBattery.RemainingCapacityInMilliwattHours.ToString();
+                            UpdateUi(UiScenarios.WithBattery);
                         }
                         else
                         {
                             _fullChargeCapacity = "0";
                             _remainingCapacity = "0";
+                            UpdateUi(UiScenarios.WithoutBattery);
                         }
-
-                        UpdateUiDetails();
                     }
                 });
                 //set time in ms to check.
@@ -121,54 +122,64 @@ namespace PlayLeft
             }
             // ReSharper disable once FunctionNeverReturns
         }
-
-        private void UpdateUiDetails()
+        /// <summary>
+        /// Update application UI according to given scenario.
+        /// </summary>
+        /// <param name="scenario">Selected scenario to be displayed.</param>
+        private void UpdateUi(UiScenarios scenario)
         {
-            LblContSelected.Text = "Controller connected.";
+            switch (scenario)
+            {
+                case UiScenarios.Default:
+                    LblContSelected.Text = "No controller is detected.";
+                    LblConnection.Text = "";
+                    LblBatteryStatus.Text = "";
+                    LblFullChargeCap.Text = "";
+                    LblRemainingCap.Text = "";
+                    LblPercentage.Text = "";
+                    TxtPercentage.Text = "";
+                    break;
+                case UiScenarios.WithoutBattery:
+                    LblContSelected.Text = "Controller without a battery connected.";
+                    LblConnection.Text = _wirelessConnected
+                        ? "Device is connected via wireless connection."
+                        : "Device is connected via cable connection.";
 
-            // Fetch resource for proper connection type.
-            LblConnection.Text = _wirelessConnected
-                ? "Device is connected via wireless."
-                : "Device is connected via cable.";
-
-            LblBatteryStatus.Text = "Battery is " + _batteryStatus + ".";
-            LblFullChargeCap.Text = "Maximum capacity is " + _fullChargeCapacity + "mWh.";
-            LblRemainingCap.Text = "Remaining capacity is " + _remainingCapacity + "mWh.";
-            LblPercentage.Text = "Remaining percentage";
-
-            // Calculate remaining percentage and display it.
-            TxtPercentage.Text = CalculatePercentage(_remainingCapacity, _fullChargeCapacity);
+                    LblBatteryStatus.Text = "Battery was not found.";
+                    LblFullChargeCap.Text = "Maximum capacity is None.";
+                    LblRemainingCap.Text = "Remaining capacity is None.";
+                    LblPercentage.Text = "Remaining percentage";
+                    TxtPercentage.Text = "None";
+                    break;
+                case UiScenarios.WithBattery:
+                    LblContSelected.Text = "Controller connected.";
+                    LblConnection.Text = _wirelessConnected
+                        ? "Device is connected via wireless."
+                        : "Device is connected via cable.";
+                    LblBatteryStatus.Text = "Battery is " + _batteryStatus + ".";
+                    LblFullChargeCap.Text = "Maximum capacity is " + _fullChargeCapacity + "mWh.";
+                    LblRemainingCap.Text = "Remaining capacity is " + _remainingCapacity + "mWh.";
+                    LblPercentage.Text = "Remaining percentage";
+                    TxtPercentage.Text = CalculatePercentage(_remainingCapacity, _fullChargeCapacity);
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(scenario), scenario, null);
+            }
         }
-
-        private void NoBatteryUi()
+        /// <summary>
+        /// Application UI scenarios.
+        /// </summary>
+        private enum UiScenarios
         {
-            LblContSelected.Text = "Controller without a battery connected.";
-
-            // Fetch resource for proper connection type.
-            LblConnection.Text = _wirelessConnected
-                ? "Device is connected via wireless connection."
-                : "Device is connected via cable connection.";
-
-            LblBatteryStatus.Text = "Battery was not found.";
-            LblFullChargeCap.Text = "Maximum capacity is None.";
-            LblRemainingCap.Text = "Remaining capacity is None.";
-            LblPercentage.Text = "Remaining percentage";
-
-            TxtPercentage.Text = "None";
+            Default,
+            WithoutBattery,
+            WithBattery
         }
-
-        private void LoadDefaultUi()
-        {
-            LblContSelected.Text = "No controller is detected.";
-
-            LblConnection.Text = "";
-            LblBatteryStatus.Text = "";
-            LblFullChargeCap.Text = "";
-            LblRemainingCap.Text = "";
-            LblPercentage.Text = "";
-            TxtPercentage.Text = "";
-        }
-
+        /// <summary>
+        /// Event handler for disconnecting controllers.
+        /// </summary>
+        /// <param name="sender">Object that called this event handler.</param>
+        /// <param name="e">Controller that was disconnected.</param>
         private async void ControllerDisconnected(object sender, Gamepad e)
         {
             _controller = null;
@@ -181,16 +192,19 @@ namespace PlayLeft
                     return;
                 if (Gamepad.Gamepads.Count != 0) return;
 
-                LoadDefaultUi();
+                UpdateUi(UiScenarios.Default);
 
                 GenerateToast(ToastType.ControllerDisconnected);
             });
         }
-
+        /// <summary>
+        /// Event handler for new controller connections.
+        /// </summary>
+        /// <param name="sender">Object that called this event handler.</param>
+        /// <param name="e">Controller that was connected.</param>
         private async void ControllerConnected(object sender, Gamepad e)
         {
             _controller = e;
-
             await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
             {
                 // If controllers count is larger than one, do noting. Will support 4 controllers once I can work out how to identify controllers.
@@ -198,11 +212,42 @@ namespace PlayLeft
                 // TODO
                 GenerateToast(ToastType.ControllerConnected);
             });
-        }
+            VibrateController(1, 0, 1, 0, 300);
 
+            
+        }
+        /// <summary>
+        /// Calculate remaining percentage based off the maximum and current capacity.
+        /// </summary>
+        /// <param name="batteryCharge">Current battery charge.</param>
+        /// <param name="fullChargeCapacity">Maximum battery charge.</param>
+        /// <returns></returns>
         private static string CalculatePercentage(string batteryCharge, string fullChargeCapacity)
         {
             return double.Parse(batteryCharge) / double.Parse(fullChargeCapacity) * 100 + "%";
+        }
+        /// <summary>
+        /// Vibrate the controller according to data provided.
+        /// </summary>
+        /// <param name="leftMotor">The strength of vibration in values between 0 and 1.</param>
+        /// <param name="leftTrigger">The strength of vibration in values between 0 and 1.</param>
+        /// <param name="rightMotor">The strength of vibration in values between 0 and 1.</param>
+        /// <param name="rightTrigger">The strength of vibration in values between 0 and 1.</param>
+        /// <param name="time">Time in milliseconds to vibrate.</param>
+        private async void VibrateController(double leftMotor, double leftTrigger, double rightMotor, double rightTrigger, int time)
+        {
+            var vibration = new GamepadVibration
+            {
+                LeftMotor = leftMotor,
+                LeftTrigger = leftTrigger,
+                RightMotor = rightMotor,
+                RightTrigger = rightTrigger
+            };
+            _controller.Vibration = vibration;
+            await Task.Delay(TimeSpan.FromMilliseconds(time));
+            vibration.LeftMotor = 0;
+            vibration.RightMotor = 0;
+            _controller.Vibration = vibration;
         }
     }
 }
